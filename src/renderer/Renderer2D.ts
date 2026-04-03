@@ -168,5 +168,11 @@ export class Renderer2D {
 
   resetCamera(): void {
     this.cameraTransform = { offsetX: 0, offsetY: 0, scale: 1 };
+    if (this.commands.length > 0 && this.options) {
+      const { width, height } = this.canvas;
+      const bounds = new TurtleInterpreter2D(0, 0).getBounds(this.commands);
+      this.autoFit(bounds, width, height);
+      this.redraw();
+    }
   }
 }

@@ -42,8 +42,8 @@ export const CanvasView: React.FC<CanvasViewProps> = ({
         renderer2DRef.current = new Renderer2D(canvasRef.current);
       } else {
         renderer2DRef.current.resetCamera();
+        renderer2DRef.current.resize(size.width, size.height);
       }
-      renderer2DRef.current.resize(size.width, size.height);
       renderer2DRef.current.render(commands2D, renderOptions);
     }
   }, [commands2D, viewMode, size, renderOptions]);

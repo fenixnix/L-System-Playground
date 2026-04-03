@@ -17,14 +17,14 @@ export const classic2DPresets: LSystemConfig[] = [
   {
     name: 'Sierpinski Triangle',
     description: '谢尔宾斯基三角形',
-    axiom: 'A',
+    axiom: 'F-G-G',
     rules: {
-      'A': 'B-A-B',
-      'B': 'A+B+A'
+      'F': 'F-G+F+G-F',
+      'G': 'GG'
     },
-    iterations: 6,
-    angle2D: 60,
-    stepLength: 5,
+    iterations: 5,
+    angle2D: 120,
+    stepLength: 8,
     lineColor: '#ff6b6b',
     backgroundColor: '#1a1a2e'
   },

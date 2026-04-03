@@ -3,14 +3,14 @@ import { LSystemConfig } from '../types/lsystem';
 export const classic2DPresets: LSystemConfig[] = [
   {
     name: 'Koch Curve',
-    description: '经典的科赫雪花曲线',
+    description: '经典的科赫曲线',
     axiom: 'F',
     rules: {
-      'F': 'F+F-F-F+F'
+      'F': 'F+F--F+F'
     },
     iterations: 4,
-    angle2D: 90,
-    stepLength: 5,
+    angle2D: 60,
+    stepLength: 4,
     lineColor: '#00ff88',
     backgroundColor: '#1a1a2e'
   },
@@ -22,9 +22,9 @@ export const classic2DPresets: LSystemConfig[] = [
       'F': 'F-G+F+G-F',
       'G': 'GG'
     },
-    iterations: 4,
+    iterations: 5,
     angle2D: 120,
-    stepLength: 8,
+    stepLength: 6,
     lineColor: '#ff6b6b',
     backgroundColor: '#1a1a2e'
   },
@@ -36,9 +36,9 @@ export const classic2DPresets: LSystemConfig[] = [
       'X': 'X+YF+',
       'Y': '-FX-Y'
     },
-    iterations: 12,
+    iterations: 11,
     angle2D: 90,
-    stepLength: 2,
+    stepLength: 3,
     lineColor: '#4ecdc4',
     backgroundColor: '#1a1a2e'
   },

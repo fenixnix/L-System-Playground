@@ -37,18 +37,18 @@ export const classic3DPresets: LSystemConfig[] = [
     backgroundColor: '#1a1a2e'
   },
   {
-    name: '3D Sierpinski Gasket',
-    description: '3D谢尔宾斯基垫片',
-    axiom: 'F-F-F-F',
+    name: '3D Koch Snowflake',
+    description: '3D科赫雪花',
+    axiom: 'F--F--F',
     rules: {
-      'F': 'F-F+F+FF-F-F+F'
+      'F': 'F&F^F-F-F^F&F'
     },
     iterations: 3,
-    angle2D: 90,
-    angleYaw: 90,
-    anglePitch: 90,
-    angleRoll: 90,
-    stepLength: 2,
+    angle2D: 60,
+    angleYaw: 60,
+    anglePitch: 60,
+    angleRoll: 60,
+    stepLength: 4,
     lineColor: '#ff6b6b',
     backgroundColor: '#1a1a2e'
   }

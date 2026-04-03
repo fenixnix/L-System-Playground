@@ -130,4 +130,10 @@ export class Renderer3D {
     this.controls.dispose();
     this.renderer.dispose();
   }
+
+  resetCamera(): void {
+    this.camera.position.set(5, 5, 5);
+    this.controls.target.set(0, 0, 0);
+    this.controls.update();
+  }
 }

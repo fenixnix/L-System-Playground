@@ -165,4 +165,8 @@ export class Renderer2D {
       this.redraw();
     }
   }
+
+  resetCamera(): void {
+    this.cameraTransform = { offsetX: 0, offsetY: 0, scale: 1 };
+  }
 }

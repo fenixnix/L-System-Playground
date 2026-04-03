@@ -22,9 +22,9 @@ export const classic2DPresets: LSystemConfig[] = [
       'F': 'F-G+F+G-F',
       'G': 'GG'
     },
-    iterations: 5,
+    iterations: 4,
     angle2D: 120,
-    stepLength: 6,
+    stepLength: 10,
     lineColor: '#ff6b6b',
     backgroundColor: '#1a1a2e'
   },

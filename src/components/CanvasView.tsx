@@ -40,6 +40,8 @@ export const CanvasView: React.FC<CanvasViewProps> = ({
     if (viewMode === '2d' && canvasRef.current) {
       if (!renderer2DRef.current) {
         renderer2DRef.current = new Renderer2D(canvasRef.current);
+      } else {
+        renderer2DRef.current.resetCamera();
       }
       renderer2DRef.current.resize(size.width, size.height);
       renderer2DRef.current.render(commands2D, renderOptions);
@@ -50,6 +52,8 @@ export const CanvasView: React.FC<CanvasViewProps> = ({
     if (viewMode === '3d' && containerRef.current) {
       if (!renderer3DRef.current) {
         renderer3DRef.current = new Renderer3D(containerRef.current);
+      } else {
+        renderer3DRef.current.resetCamera();
       }
       renderer3DRef.current.resize(size.width, size.height);
       renderer3DRef.current.render(commands3D, renderOptions);

@@ -1,0 +1,73 @@
+import { LSystemConfig } from '../types/lsystem';
+
+export const classic2DPresets: LSystemConfig[] = [
+  {
+    name: 'Koch Curve',
+    description: '经典的科赫雪花曲线',
+    axiom: 'F',
+    rules: {
+      'F': 'F+F-F-F+F'
+    },
+    iterations: 4,
+    angle2D: 90,
+    stepLength: 5,
+    lineColor: '#00ff88',
+    backgroundColor: '#1a1a2e'
+  },
+  {
+    name: 'Sierpinski Triangle',
+    description: '谢尔宾斯基三角形',
+    axiom: 'F-G-G',
+    rules: {
+      'F': 'F-G+F+G-F',
+      'G': 'GG'
+    },
+    iterations: 6,
+    angle2D: 120,
+    stepLength: 3,
+    lineColor: '#ff6b6b',
+    backgroundColor: '#1a1a2e'
+  },
+  {
+    name: 'Dragon Curve',
+    description: '龙形曲线',
+    axiom: 'FX',
+    rules: {
+      'X': 'X+YF+',
+      'Y': '-FX-Y'
+    },
+    iterations: 12,
+    angle2D: 90,
+    stepLength: 2,
+    lineColor: '#4ecdc4',
+    backgroundColor: '#1a1a2e'
+  },
+  {
+    name: 'Fractal Plant',
+    description: '分形植物',
+    axiom: 'X',
+    rules: {
+      'X': 'F+[[X]-X]-F[-FX]+X',
+      'F': 'FF'
+    },
+    iterations: 5,
+    angle2D: 25,
+    stepLength: 3,
+    lineColor: '#88d8b0',
+    backgroundColor: '#1a1a2e'
+  },
+  {
+    name: 'Hilbert Curve',
+    description: '希尔伯特曲线',
+    axiom: 'A',
+    rules: {
+      'A': '-BF+AFA+FB-',
+      'B': '+AF-BFB-FA+'
+    },
+    iterations: 5,
+    angle2D: 90,
+    stepLength: 3,
+    lineColor: '#ffd93d',
+    backgroundColor: '#1a1a2e'
+  }
+];
